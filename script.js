@@ -24,6 +24,7 @@ tipPercentLabels.forEach((label) =>
         tipPercentCustomInput.value = "";
         // Why do i need this line???
         label.previousElementSibling.checked = true;
+
         calcBill();
     })
 );
@@ -82,6 +83,8 @@ function reset() {
     // 5.3: Reset Tip percentage and Number of People to default Value
     document.getElementById("input-tip-3").checked = true;
     document.getElementById("input-people").value = 1;
+    // 5.4: Clear Error
+    clearError();
 }
 // 6. DisplayError Function:
 function displayError(typeOfError) {

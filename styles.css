@@ -47,7 +47,7 @@ input {
 }
 
 input:focus {
-    border: 2px solid var(--clr-primary-cyan);
+    outline: 2px solid var(--clr-primary-cyan);
 }
 
 /* Remove arrow on input[type = number] */
@@ -258,5 +258,5 @@ p {
 .input-bill.error,
 .input-people.error,
 #input-tip-custom.error {
-    border: 2px solid hsl(0, 97%, 48%);
+    outline: 2px solid hsl(0, 100%, 60%);
 }
