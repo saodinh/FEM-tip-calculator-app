@@ -1,0 +1,262 @@
+:root {
+    --clr-cyan-300: hsl(189, 41%, 97%);
+    --clr-cyan-400: hsl(185, 41%, 84%);
+    --clr-cyan-500: hsl(184, 14%, 56%);
+    --clr-cyan-600: hsl(186, 14%, 43%);
+    --clr-cyan-700: hsl(183, 100%, 15%);
+    --clr-primary-cyan: hsl(172, 67%, 45%);
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    background-color: var(--clr-cyan-400);
+    font-size: 1.6rem;
+    color: var(--clr-cyan-600);
+}
+
+input,
+button {
+    font-family: inherit;
+}
+
+input {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: right;
+    color: var(--clr-cyan-700);
+    background-color: var(--clr-cyan-300);
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    padding-right: 2rem;
+}
+
+input:focus {
+    border: 2px solid var(--clr-primary-cyan);
+}
+
+/* Remove arrow on input[type = number] */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+label {
+    display: block;
+}
+
+label,
+p {
+    font-weight: 700;
+}
+
+.header {
+    /* Center logo img */
+    text-align: center;
+    margin: 5rem 0 4rem;
+}
+
+@media (min-width: 800px) {
+    .header {
+        margin: 15rem 0 10rem;
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--clr-white);
+    border-radius: 2rem;
+    padding: 2.5rem;
+}
+
+@media (min-width: 800px) {
+    .main-container {
+        flex-direction: row;
+        max-width: 920px;
+        padding: 3.2rem;
+    }
+}
+
+.col-right {
+    background-color: var(--clr-cyan-700);
+    border-radius: 1rem;
+    padding: 4rem 2rem 2rem;
+}
+
+.col-left {
+    padding: 0.5rem 1rem;
+}
+
+@media (min-width: 800px) {
+    .col-right {
+        width: 50%;
+        padding: 5.5rem 4rem 4rem;
+    }
+
+    .col-left {
+        width: 50%;
+        padding: 1.5rem;
+    }
+}
+
+.input-bill {
+    margin-bottom: 3.3rem;
+}
+
+@media (min-width: 800px) {
+    .input-bill {
+        margin-bottom: 4rem;
+    }
+}
+
+/* Get the icons "dollar" and "person" inside the input */
+
+.label-bill,
+.label-people {
+    position: relative;
+    margin-bottom: 0.7rem;
+}
+
+.label-bill::before,
+.label-people::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 55px;
+    left: 20px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+}
+
+.label-bill::before {
+    background-image: url(./images/icon-dollar.svg);
+}
+
+.label-people::before {
+    background-image: url(./images/icon-person.svg);
+}
+
+/* Turn Radio Inputs => Grid buttons */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 800px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 4rem;
+    }
+}
+
+.input-tip-label {
+    color: var(--clr-white);
+    font-size: 2.4rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: var(--clr-cyan-700);
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.grid-container input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    transform: translateX(-9999px);
+    width: 0;
+}
+
+.grid-container input[type="radio"]:checked + label {
+    background-color: var(--clr-primary-cyan);
+    color: var(--clr-cyan-700);
+}
+
+/* Column Right */
+
+.tip-amount,
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip-amount {
+    margin-bottom: 2rem;
+}
+
+.total {
+    margin-bottom: 3rem;
+}
+
+.value {
+    font-size: 3rem;
+    color: var(--clr-primary-cyan);
+}
+
+@media (min-width: 800px) {
+    .total {
+        margin-bottom: 12rem;
+    }
+
+    .value {
+        font-size: 4.5rem;
+    }
+}
+
+.type {
+    color: var(--clr-white);
+}
+
+.btn-reset {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--clr-cyan-700);
+    background-color: var(--clr-primary-cyan);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.btn-reset:hover {
+    background-color: var(--clr-cyan-400);
+}
+
+/* Error Handling */
+.input-bill.error,
+.input-people.error,
+#input-tip-custom.error {
+    border: 2px solid hsl(0, 97%, 48%);
+}

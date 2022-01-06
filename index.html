@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Script -->
+        <script src="script.js" defer></script>
+        <title>Frontend Mentor | Tip calculator app</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="img-logo"><img src="./images/logo.svg" alt="Splitter tip calculator logo" /></div>
+        </header>
+        <main class="main">
+            <div class="main-container">
+                <div class="col-left">
+                    <!-- Bill Input -->
+                    <label class="label-bill" for="input-bill">Bill</label>
+                    <input class="input-bill" type="number" name="input-bill" id="input-bill" placeholder="0" />
+
+                    <!-- Tip Percentage Inputs -->
+                    <p>Select Tip %</p>
+
+                    <div class="grid-container">
+                        <input type="radio" name="input-tip" id="input-tip-1" value="5" />
+                        <label class="input-tip-label" for="input-tip-1">5%</label>
+
+                        <input type="radio" name="input-tip" id="input-tip-2" value="10" />
+                        <label class="input-tip-label" for="input-tip-2">10%</label>
+
+                        <input type="radio" name="input-tip" id="input-tip-3" value="15" checked />
+                        <label class="input-tip-label" for="input-tip-3">15%</label>
+
+                        <input type="radio" name="input-tip" id="input-tip-4" value="25" />
+                        <label class="input-tip-label" for="input-tip-4">25%</label>
+
+                        <input type="radio" name="input-tip" id="input-tip-5" value="50" />
+                        <label class="input-tip-label" for="input-tip-5">50%</label>
+
+                        <input type="radio" name="input-tip" id="input-tip-6" />
+                        <input type="number" name="input-tip-custom" id="input-tip-custom" placeholder="Custom" />
+                    </div>
+
+                    <!-- Number of People Input -->
+                    <label class="label-people" for="input-people">Number of People</label>
+                    <input
+                        class="input-people"
+                        type="number"
+                        name="input-people"
+                        id="input-people"
+                        placeholder="0"
+                        value="1"
+                    />
+                </div>
+
+                <div class="col-right">
+                    <div class="tip-amount">
+                        <div>
+                            <p class="type">Tip Amount</p>
+                            <p>/ person</p>
+                        </div>
+                        <p class="value" id="tip-value">$0.00</p>
+                    </div>
+
+                    <div class="total">
+                        <div>
+                            <p class="type">Total</p>
+                            <p>/ person</p>
+                        </div>
+                        <p class="value" id="total-value">$0.00</p>
+                    </div>
+
+                    <button class="btn btn-reset" id="btn-reset">Reset</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
