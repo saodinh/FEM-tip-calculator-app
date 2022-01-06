@@ -41,7 +41,6 @@ btnReset.addEventListener("click", () => {
 
 // 4. calcBill Function:
 function calcBill() {
-    console.log("calculating...");
     //   4.1: Get value from billInput, tipPercentage, numberOfPeople
     const bill = +billInput.value;
     const peopleNumber = +peopleInput.value;
@@ -50,7 +49,7 @@ function calcBill() {
     tipPercentInputs.forEach((input) => {
         if (input.checked === true) tipPercent = +input.value;
     });
-    console.log(bill, peopleNumber, tipPercent);
+
     //   4.2: if (tip percentage < 0)|| billInput < 0 || numberOfPeople < 0 => call displayError()
     if (bill <= 0 || peopleNumber <= 0 || tipPercent <= 0) {
         if (bill <= 0) displayError("bill");
